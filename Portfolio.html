@@ -1,30 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+        <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name's Portfolio</title>
+    <title>Your Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
+
 <body>
-    <h1>Peter Caprio Portfolio</h1>
+    <nav>
+        <button onclick="openTab('home', this)" class="tab-link active" id="defaultTab">Home</button>
+        <button onclick="openTab('coding-projects', this)" class="tab-link">Coding Projects</button>
+        <button onclick="openTab('writing', this)" class="tab-link">Writing</button>
+        <button onclick="openTab('landscape-photos', this)" class="tab-link">Landscape Photos</button>
+        <button onclick="openTab('wikipedia-articles', this)" class="tab-link">Wikipedia Articles</button>
+        <button onclick="openTab('running-expeditions', this)" class="tab-link">Running Expeditions</button>
+        <button onclick="openTab('other-interests', this)" class="tab-link">Other Interests</button>
+    </nav>
 
-    <ul class="tabs">
-        <li onclick="showTab('coding')">Coding Projects</li>
-        <li onclick="showTab('writing')">Writing</li>
-        <li onclick="showTab('photos')">Landscape Photos</li>
-        <li onclick="showTab('wikipedia')">Wikipedia Articles</li>
-        <li onclick="showTab('running')">Running Expeditions</li>
-        <li onclick="showTab('interests')">Other Interests</li>
-    </ul>
-
-    <div id="coding" class="content">Content for Coding Projects</div>
-    <div id="writing" class="content">Content for Writing</div>
-    <div id="photos" class="content">Content for Landscape Photos</div>
-    <div id="wikipedia" class="content">Content for Wikipedia Articles</div>
-    <div id="running" class="content">Content for Running Expeditions</div>
-    <div id="interests" class="content">Content for Other Interests</div>
-
-    <script src="scripts.js"></script>
+    <div class="tab-content" id="home">
+        Content for Home
+    </div>
+    <!-- Replicate the .project-card div for other projects as needed -->
+    <div class="tab-content" id="coding-projects">
+        <div class="project-card">
+            <h3 class="project-title">Binary Search Tree from Scratch</h3>
+            <p class="project-language">Language: C++</p>
+            <p class="project-description">
+                This project is centered around creating a Binary Search Tree data structure
+            </p>
+            <a href="#" class="project-link">View on GitHub</a>
+        </div>
+        <!-- Replicate the .project-card div for other projects as needed -->
+    </div>
+    <div class="tab-content" id="writing">
+        Content for Writing
+    </div>
+    <div class="tab-content" id="landscape-photos">
+        Content for Landscape Photos
+    </div>
+    <div class="tab-content" id="wikipedia-articles">
+        Content for Wikipedia Articles
+    </div>
+    <div class="tab-content" id="running-expeditions">
+        Content for Running Expeditions
+    </div>
+    <div class="tab-content" id="other-interests">
+        Content for Other Interests
+    </div>
 </body>
+
 </html>

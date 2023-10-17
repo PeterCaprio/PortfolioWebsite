@@ -1,21 +1,18 @@
-function showTab(tabId) {
-    // Hide all contents
-    var contents = document.querySelectorAll('.content');
-    for (var i = 0; i < contents.length; i++) {
-        contents[i].classList.remove('active');
+function openTab(tabId, element) {
+    var contentEls = document.getElementsByClassName("tab-content");
+    for (var i = 0; i < contentEls.length; i++) {
+        contentEls[i].style.display = "none";
     }
-    
-    // Remove active class from all tabs
-    var tabs = document.querySelectorAll('.tabs li');
-    for (var i = 0; i < tabs.length; i++) {
-        tabs[i].classList.remove('active');
+
+    var tabLinks = document.getElementsByClassName("tab-link");
+    for (var i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove("active");
     }
-    
-    // Show selected content and set tab as active
-    document.getElementById(tabId).classList.add('active');
-    var activeTab = document.querySelector('.tabs li[onclick="showTab(\'' + tabId + '\')"]');
-    activeTab.classList.add('active');
+
+    document.getElementById(tabId).style.display = "block";
+    element.classList.add("active");
 }
 
-// Default tab to show when page loads
-showTab('coding');
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("defaultTab").click();
+});
