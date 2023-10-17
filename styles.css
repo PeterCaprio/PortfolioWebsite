@@ -1,0 +1,27 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 10px 0;
+}
+.tabs li {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+}
+.tabs li.active {
+    background-color: #eee;
+    border-bottom-color: white;
+}
+.content {
+    display: none;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+.content.active {
+    display: block;
+}
