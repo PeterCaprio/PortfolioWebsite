@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="tabs">
+        <button class="tab-button active" onclick="showTab('coding')" onmouseover="hoverButton(this)" onmouseout="unhoverButton(this)">Coding Projects</button>
+        <button class="tab-button" onclick="showTab('writing')" onmouseover="hoverButton(this)" onmouseout="unhoverButton(this)">Writing</button>
+        <button class="tab-button" onclick="showTab('photos')" onmouseover="hoverButton(this)" onmouseout="unhoverButton(this)">Landscape Photos</button>
+        <button class="tab-button" onclick="showTab('wiki')" onmouseover="hoverButton(this)" onmouseout="unhoverButton(this)">Wikipedia Articles</button>
+        <button class="tab-button" onclick="showTab('running')" onmouseover="hoverButton(this)" onmouseout="unhoverButton(this)">Running Expeditions</button>
+        <button class="tab-button" onclick="showTab('interests')" onmouseover="hoverButton(this)" onmouseout="unhoverButton(this)">Other Interests</button>
+    </div>
+
+    <div class="tab-content" id="coding">
+        <!-- Coding Projects content here -->
+        <div class="project">
+            <h3>Binary Tree</h3>
+            <img src="path/to/project-thumbnail1.jpg" alt="Binary Tree Project Screenshot" class="project-screenshot">
+            <p><strong>Language:</strong> C++</p>
+            <p><strong>Description:</strong>A Binary Tree Dynamic Data Structure</p>
+            <p><a href="projectURL" target="_blank">View Project</a></p>
+        </div>
+        <div class="project">
+            <h3>Discord Bot</h3>
+            <img src="path/to/project-thumbnail2.jpg" alt="Discord Bot Project Screenshot" class="project-screenshot">
+            <p><strong>Language:</strong> Python</p>
+            <p><strong>Description:</strong>A Discord bot built for my personal Discord server</p>
+            <p><a href="projectURL" target="_blank">View Project</a></p>
+        </div>
+    </div>
+
+    <div class="tab-content" id="photos">
+        <div class="image-carousel">
+            <div class="carousel-slide">
+                <img src="path/to/image1.jpg" alt="Landscape Photo 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="path/to/image2.jpg" alt="Landscape Photo 2">
+            </div>
+            <!-- Add more slides as needed -->
+    
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+    </div>
+
+    
+    <!--... rest of the content remains unchanged ...-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
