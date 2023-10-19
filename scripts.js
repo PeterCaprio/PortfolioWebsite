@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     showTab('coding'); // Default tab to show
 
-    // Initialize Swiper carousel
+    // If you plan on using the Swiper carousel, uncomment the below lines
+    /*
     var mySwiper = new Swiper('.swiper-container', {
         lazy: true,
         navigation: {
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
             prevEl: '.swiper-button-prev',
         },
     });
+    */
 });
 
 function showTab(tabId) {
@@ -25,14 +27,4 @@ function showTab(tabId) {
 
     document.getElementById(tabId).style.display = 'block';
     document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`).classList.add('active');
-}
-
-function hoverButton(button) {
-    button.style.backgroundColor = "#ccc";
-}
-
-function unhoverButton(button) {
-    if (!button.classList.contains('active')) {
-        button.style.backgroundColor = "";
-    }
 }
