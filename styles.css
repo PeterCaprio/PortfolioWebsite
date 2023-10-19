@@ -64,3 +64,41 @@ body {
     max-width: 800px;
     margin: 20px auto;
 }
+
+#wiki ul {
+    padding: 0;
+    list-style-type: none; /* Remove default bullet points */
+}
+
+#wiki li {
+    background-color: #f9f9f9;  /* A light gray background for contrast */
+    border: 1px solid #e1e1e1;  /* A border to clearly define each article link */
+    padding: 10px;  /* Some internal spacing around the link */
+    margin: 10px 0;  /* Space between each article link */
+    border-radius: 5px;  /* Rounded corners for aesthetics */
+}
+
+#wiki li a {
+    text-decoration: none;  /* Remove the default underlining of the link */
+    color: blue;  /* Color of the link text */
+    display: block;  /* Makes the whole area clickable */
+}
+
+#wiki li:hover {
+    background-color: #e6e6e6;  /* Slightly darker background on hover for a subtle effect */
+}
+
+/* Wikipedia Article Photos */
+.wiki-photos {
+    margin-top: 20px;  /* Some space above the photos section */
+    display: flex;
+    justify-content: space-around;  /* Distribute photos with equal space around them */
+    flex-wrap: wrap;  /* Allows photos to wrap to the next line on smaller screens */
+}
+
+.wiki-image {
+    margin: 10px;  /* Margin around each photo for separation */
+    max-width: 45%;  /* Limit width of images */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);  /* A subtle shadow around each image */
+    border-radius: 5px;  /* Rounded corners for aesthetics */
+}
